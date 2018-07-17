@@ -1,18 +1,29 @@
 <template>
-  <div>{{msg}}</div>
+  <div>
+    <h1>{{msg}}</h1>
+    <button @click="navToNextPageFunc()">Next-></button>
+    <name></name>
+  </div>
 </template>
 
 <script>
-</script>
+  import Name from '@/components/Name';
+  import { navigateTo } from '@/utils';
 
-<script>
   export default{
     data() {
       return {
-        msg: 'hello pageMain'
+        msg: 'hello pageMain',
       }
     },
-    components: {}
+    methods: {
+      navToNextPageFunc() {
+        navigateTo('PageDetail');
+      }
+    },
+    components: {
+      'name': Name
+    }
   }
 </script>
 

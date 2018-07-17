@@ -10,7 +10,7 @@
  * @param param
  * @param reload：是否保存访问历史
  */
-export function navigateTo (urlName = 'pageMain', param = {}, reload = true) {
+export function navigateTo (urlName = '', param = {}, reload = true) {
   if (reload) {
     window.vm.$router.push({name: urlName, query: param})
   } else {
