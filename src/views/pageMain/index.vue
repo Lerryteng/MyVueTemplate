@@ -17,6 +17,9 @@
       }
     },
     methods: {
+      /**
+       * 路由跳转
+       */
       navToNextPageFunc() {
         navigateTo('PageDetail');
       }
