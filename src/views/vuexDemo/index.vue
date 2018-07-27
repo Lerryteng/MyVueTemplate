@@ -1,17 +1,18 @@
 <template>
-  <div class="page-detail">
-    <h1>{{msg}}</h1>
-    <button @click="navToPrevPageFunc()"><-Prev</button>
+  <div class="vuex-demo">
+    <button @click="navToPrevPageFunc()"><-Back</button>
+    <name></name>
   </div>
 </template>
 
 <script>
+  import Name from '@/components/Name';
   import { navigateTo } from '@/utils';
 
   export default{
     data() {
       return {
-        msg: 'hello pageDetail'
+        msg: 'hello vue'
       }
     },
     methods: {
@@ -22,7 +23,9 @@
         navigateTo('PageMain');
       }
     },
-    components: {}
+    components: {
+      'name': Name
+    }
   }
 </script>
 
