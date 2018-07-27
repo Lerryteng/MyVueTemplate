@@ -1,10 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import PageMain from '@/views/pageMain/index'
-import PageDetail from '@/views/PageDetail/index'
-import SliderDemo from '@/views/SliderDemo/index'
-import VuexDemo from '@/views/VuexDemo/index'
-import AxiosDemo from '@/views/AxiosDemo/index'
 
 Vue.use(Router);
 
@@ -14,23 +9,33 @@ const router = new Router({
     {
       path: '/',
       name: 'PageMain',
-      component: PageMain
+      component(resolve) {
+        require(['@/views/pageMain/index.vue'], resolve)
+      }
     }, {
       path: '/PageDetail',
       name: 'PageDetail',
-      component: PageDetail
+      component(resolve) {
+        require(['@/views/pageDetail/index.vue'], resolve)
+      }
     }, {
       path: '/SliderDemo',
       name: 'SliderDemo',
-      component: SliderDemo
+      component(resolve) {
+        require(['@/views/sliderDemo/index.vue'], resolve)
+      }
     }, {
       path: '/VuexDemo',
       name: 'VuexDemo',
-      component: VuexDemo
+      component(resolve) {
+        require(['@/views/vuexDemo/index.vue'], resolve)
+      }
     }, {
       path: '/AxiosDemo',
       name: 'AxiosDemo',
-      component: AxiosDemo
+      component(resolve) {
+        require(['@/views/axiosDemo/index.vue'], resolve)
+      }
     }, {
       path: '*',
       redirect: '/'
