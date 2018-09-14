@@ -2,7 +2,7 @@
  * Created by tengteng on 18/7/17.
  */
 
-// filter
+// 公共过滤器
 
 import { formatDate } from '@/utils';
 
