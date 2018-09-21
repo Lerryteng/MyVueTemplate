@@ -6,7 +6,8 @@
       <h2>Demo List</h2>
       <button @click="navToNextPageFunc(item.path)"
               v-for="(item,index) in demoList"
-              :key="index">{{item.name}}</button>
+              :key="index">{{item.name}}
+      </button>
     </div>
   </div>
 </template>
@@ -20,7 +21,7 @@
       return {
         msg: 'hello pageMain',
         demoList: [
-          {name: 'sliderDemo', path: 'SliderDemo'},
+          {name: 'componentDemo', path: 'ComponentDemo'},
           {name: 'vuexDemo', path: 'VuexDemo'},
           {name: 'axiosDemo', path: 'AxiosDemo'},
         ]

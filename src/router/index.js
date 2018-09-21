@@ -19,10 +19,10 @@ const router = new Router({
         require(['@/views/pageDetail/index.vue'], resolve)
       }
     }, {
-      path: '/SliderDemo',
-      name: 'SliderDemo',
+      path: '/ComponentDemo',
+      name: 'ComponentDemo',
       component(resolve) {
-        require(['@/views/sliderDemo/index.vue'], resolve)
+        require(['@/views/componentDemo/index.vue'], resolve)
       }
     }, {
       path: '/VuexDemo',
@@ -44,8 +44,8 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-  console.log('from：', from);
-  console.log('to：', to);
+  // console.log('from：', from);
+  // console.log('to：', to);
   next();
 });
 
