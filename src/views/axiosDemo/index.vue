@@ -12,10 +12,17 @@
   import { navigateTo } from '@/utils';
 
   export default{
+    name: 'axiosDemo',
     data() {
       return {
         msg: 'hello vue'
       }
+    },
+    activated() {
+      console.log('activated');
+    },
+    deactivated() {
+      console.log('deactivated');
     },
     methods: {
       /**

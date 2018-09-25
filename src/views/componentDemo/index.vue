@@ -1,7 +1,12 @@
 <template>
-  <div class="slider-demo">
-    <h2 v-dirTest>{{message}}</h2>
+  <div class="component-demo">
+    <h2>{{message}}</h2>
     <button @click="navToPrevPageFunc()"><-Back</button>
+    <div class="test">
+      <ul>
+        <li v-for="(item,index) in 100" :key="index">item: {{item}}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -9,6 +14,7 @@
   import { navigateTo } from '@/utils';
 
   export default{
+    name: 'componentDemo',
     data() {
       return {
         message: 'Component Demo'
@@ -26,20 +32,20 @@
 //      console.log('data:', this.$data);
 //      console.log('message:', this.message);
 //    },
-    beforeMount() {
-      console.log('beforeMount');
-      console.log('el:', this.$el);
-      console.log('data:', this.$data);
-      console.log('message:', this.message);
-      console.log('vm.el:', vm.$el);
-    },
-    mounted() {
-      console.log('mounted');
-      console.log('el:', this.$el);
-      console.log('data:', this.$data);
-      console.log('message:', this.message);
-      console.log('vm.el:', vm.$el);
-    },
+//    beforeMount() {
+//      console.log('beforeMount');
+//      console.log('el:', this.$el);
+//      console.log('data:', this.$data);
+//      console.log('message:', this.message);
+//      console.log('vm.el:', vm.$el);
+//    },
+//    mounted() {
+//      console.log('mounted');
+//      console.log('el:', this.$el);
+//      console.log('data:', this.$data);
+//      console.log('message:', this.message);
+//      console.log('vm.el:', vm.$el);
+//    },
 //    beforeUpdate() {
 //      console.log('beforeUpdate');
 //      console.log('el:', this.$el);
@@ -52,12 +58,12 @@
 //      console.log('data:', this.$data);
 //      console.log('message:', this.message);
 //    },
-//    activated() {
-//      console.log('activated');
-//    },
-//    deactivated() {
-//      console.log('deactivated');
-//    },
+    activated() {
+      console.log('activated');
+    },
+    deactivated() {
+      console.log('deactivated');
+    },
 //    beforeDestroy() {
 //      console.log('beforeDestroy');
 //      console.log('el:', this.$el);

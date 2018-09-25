@@ -23,6 +23,9 @@ const router = new Router({
       name: 'ComponentDemo',
       component(resolve) {
         require(['@/views/componentDemo/index.vue'], resolve)
+      },
+      meta: {
+        keepAlive: true
       }
     }, {
       path: '/VuexDemo',
@@ -35,6 +38,9 @@ const router = new Router({
       name: 'AxiosDemo',
       component(resolve) {
         require(['@/views/axiosDemo/index.vue'], resolve)
+      },
+      meta: {
+        keepAlive: false
       }
     }, {
       path: '*',
