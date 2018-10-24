@@ -16,7 +16,7 @@
 
   import { navigateTo } from '@/utils';
 
-  export default{
+  export default {
     data() {
       return {
         msg: 'hello pageMain',
@@ -24,6 +24,7 @@
           {name: 'componentDemo', path: 'ComponentDemo'},
           {name: 'vuexDemo', path: 'VuexDemo'},
           {name: 'axiosDemo', path: 'AxiosDemo'},
+          {name: 'loadMoreDemo', path: 'LoadMoreDemo'}
         ]
       }
     },
@@ -34,8 +35,7 @@
       navToNextPageFunc(path) {
         navigateTo(path);
       }
-    },
-    components: {}
+    }
   }
 </script>
 

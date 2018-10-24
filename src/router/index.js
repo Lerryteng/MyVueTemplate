@@ -43,6 +43,15 @@ const router = new Router({
         keepAlive: false
       }
     }, {
+      path: '/LoadMoreDemo',
+      name: 'LoadMoreDemo',
+      component(resolve) {
+        require(['@/views/loadMoreDemo/index.vue'], resolve)
+      },
+      meta: {
+        keepAlive: false
+      }
+    }, {
       path: '*',
       redirect: '/'
     }
