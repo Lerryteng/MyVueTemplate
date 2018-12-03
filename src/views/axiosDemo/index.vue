@@ -4,6 +4,9 @@
     <h2>result in console</h2>
     <button @click="getUserInfoFunc();">get</button>
     <button @click="getListDataFunc();">post</button>
+    <div class="test">
+      <div class="inner"></div>
+    </div>
   </div>
 </template>
 

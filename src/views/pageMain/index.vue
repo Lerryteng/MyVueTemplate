@@ -13,7 +13,6 @@
 </template>
 
 <script>
-
   import { navigateTo } from '@/utils';
 
   export default {
@@ -27,6 +26,8 @@
           {name: 'loadMoreDemo', path: 'LoadMoreDemo'}
         ]
       }
+    },
+    created() {
     },
     methods: {
       /**

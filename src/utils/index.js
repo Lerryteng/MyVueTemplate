@@ -77,3 +77,45 @@ export function formatDate (date = new Date(), fmt = 'yyyy-MM-dd HH:mm:ss') {
 
   return fmt
 };
+
+/**
+ * 防抖函数
+ * @param func
+ * @param delay
+ */
+export function debounce(func, delay) {
+  // 维护一个timer
+  let timer = null;
+  return function() {
+    // 获取函数的作用域和变量
+    let context = this;
+    let args = arguments;
+    // 清除timer
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      func.apply(context, args);
+    }, delay);
+  }
+}
+
+/**
+ * 节流函数
+ * @param func
+ * @param delay
+ */
+export function throttle(func, delay) {
+  // 维护一个timer
+  let timer = null;
+  return function() {
+    // 获取函数的作用域和变量
+    let context = this;
+    let args = arguments;
+    if (!timer) {
+      timer = setTimeout(function() {
+        func.apply(context, args);
+        // 重置timer
+        timer = null;
+      }, delay);
+    }
+  }
+}
