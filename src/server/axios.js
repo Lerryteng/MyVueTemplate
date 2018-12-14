@@ -117,7 +117,7 @@ export default function(url, {
     baseURL: baseUrl.URL_EASYMOCK,
     data: data,
     headers: headers,
-    dataType: dataType
+    responseType: dataType
   };
   return axios(config);
 }
