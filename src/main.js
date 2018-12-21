@@ -6,6 +6,7 @@ import router from './router';
 import store from './store';
 import * as filters from './filter';
 import 'mint-ui/lib/style.css'
+import 'lib-flexible';
 
 // register global utility filters.
 Object.keys(filters).forEach((key) => {
