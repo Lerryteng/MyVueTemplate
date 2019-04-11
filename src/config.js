@@ -5,7 +5,8 @@
 // baseUrl
 
 const DOMAIN_NAME = {
-  URL_EASYMOCK: 'https://easy-mock.com/mock/5a58669d3dcb200788d26fa0/baseUrl/'
+  URL_EASYMOCK: 'https://easy-mock.com/mock/5a58669d3dcb200788d26fa0/baseUrl/',
+  URL_TEST: 'https://www.baidu.com'
 };
 
 export default DOMAIN_NAME;
